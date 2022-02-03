@@ -29,19 +29,17 @@ public class Main {
 		int choice = inputInt(String.format(
 				"Виберіть спосіб введення данних, в діапазоні [%d | %d]:\n1) рандомно \n2) з клавіатури\n> ", getMin(), getMax()),
 				1, 2);
-		do {
-			if (choice == 1) {
-				for (int i = 0; i < array.length; i++) {
-					array[i] = randInt(getMin(),getMax());
-				}
-			} else if (choice == 2) {
-				for (int i = 0; i < array.length; i++) {
-					array[i] = inputInt(String.format("array[%d] = ", i), getMin(), getMax());
-				}
-			} else {
-				choice = -1;
+		if (choice == 1) {
+			for (int i = 0; i < array.length; i++) {
+				array[i] = randInt(getMin(),getMax());
 			}
-		} while (choice == -1);
+		} else if (choice == 2) {
+			for (int i = 0; i < array.length; i++) {
+				array[i] = inputInt(String.format("array[%d] = ", i), getMin(), getMax());
+			}
+		} else {
+			choice = -1;
+		}
 
 		System.out.println("\n******************************************************************");
 		printArray("array", array);
