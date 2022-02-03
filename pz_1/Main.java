@@ -37,9 +37,7 @@ public class Main {
 			for (int i = 0; i < array.length; i++) {
 				array[i] = inputInt(String.format("array[%d] = ", i), getMin(), getMax());
 			}
-		} else {
-			choice = -1;
-		}
+		} 
 
 		System.out.println("\n******************************************************************");
 		printArray("array", array);
