@@ -21,7 +21,7 @@ public class MainTest {
 		assertEquals(expResult, result, EPS);
 		System.out.print("testSumUnpairedElements (парні і непарні елементи) --> " + expResult + " | " + result + "\n");
 	}
-	
+
 	@Test
 	public void testSumUnpairedElements2() {
 		//всі елементи непарні

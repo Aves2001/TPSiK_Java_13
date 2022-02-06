@@ -10,7 +10,7 @@ public class Main {
 		Main main = new Main();
 		main.run();
 	}
-	
+
 	public void run() {
 		int[] array = new int[inputInt("Введіть розмір масива: ",1)];
 
@@ -25,36 +25,36 @@ public class Main {
 			for (int i = 0; i < array.length; i++) {
 				array[i] = inputInt(String.format("array[%d] = ", i));
 			}
-		} 
+		}
 
 		System.out.println("\n******************************************************************");
 		printArray("array", array);
-		
+
 		int sumUnpairedElements = sumUnpairedElements(array);
 		System.out.printf("\nКількість непарних елементів в одновимірному масиві: %d\n",sumUnpairedElements);
 	}
-	
+
 	public int sumUnpairedElements(int arr[]) {
 		int sum = 0;
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] %2 != 0 ) {
+		for (int element : arr) {
+			if (element %2 != 0 ) {
 				sum+=1;
 			}
 		}
 		return sum;
 	}
-	
+
 	public void printArray(String arrayName, int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("%s[%d] = %d\n", arrayName, i, array[i]);
 		}
 	}
-	
+
 	public int randInt(int min, int max) {
 		Random random = new Random();
 		return random.nextInt((max+1)  - min) + min;
 	}
-	
+
 	public boolean isInt(String str) {
 		try {
 			Integer.parseInt(str);
@@ -63,11 +63,11 @@ public class Main {
 			return false;
 		}
 	}
-	
+
 	public int inputInt(String message) {
 		return inputInt(message, Integer.MIN_VALUE, Integer.MAX_VALUE);
 	}
-	
+
 	public int inputInt(String message, int min) {
 		return inputInt(message, min, Integer.MAX_VALUE);
 	}
@@ -86,7 +86,7 @@ public class Main {
 		}while(error);
 		return rez;
 	}
-	
+
 	public int inputInt(String inputStr, String message, int min, int max) throws Exception {
 		scaner = new Scanner(System.in);
 		String str;
