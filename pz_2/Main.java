@@ -15,7 +15,7 @@ public class Main {
 		int[] array = new int[inputInt("Введіть розмір масива: ",1)];
 
 		int choice = inputInt(String.format(
-				"Виберіть спосіб введення данних:\n1) рандомно \n2) з клавіатури\n> "),
+				"Виберіть спосіб введення данних:\n1) рандомно [-100 | 100] \n2) з клавіатури\n> "),
 				1, 2);
 		if (choice == 1) {
 			for (int i = 0; i < array.length; i++) {
